@@ -1,129 +1,120 @@
-       :root{
-        --brand-1: #8b5e3c; /* café/bronze */
-        --accent: #f6d6c7; /* rosa nude */
-        --muted: #6b6b6b;
-      }
+:root {
+    --gold: #d4af37;
+    --dark: #1a1a1a;
+    --light-bg: #fdfaf7;
+}
 
-      body{
-        font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; 
-        background: #fff8f6; 
-        color:#2b2b2b}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-bg);
+}
 
-      /* NAV */
-      container-nav {
-        background-color: #2b2b2b;
-      }
+.playfair { font-family: 'Playfair Display', serif; }
 
+/* Navbar */
+.navbar {
+    background-color: rgba(0,0,0,0.95);
+    backdrop-filter: blur(10px);
+}
 
-    .site-logo {
-        font-family: 'Playfair Display', serif; 
-        font-weight:700; 
-        letter-spacing:1px;
-    }
+.logo-site { height: 45px; }
+.site-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
 
-    /* Contenedor del logo */
-    .logo-site {
-      height: 80px; /* ajusta según tu diseño */
-      width: auto;
-      display: block;
-      object-fit: contain;
-    }
+/* Hero */
+.hero-section {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+}
 
-    /* Si el logo está en el navbar */
-    .navbar .logo-site {
-      max-height: 80px; /* altura menor en barra */
-    }
-    
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    /* Si quieres que responda bien en móviles */
-    @media (max-width: 576px) {
-      .logo-site {
-        max-height: 50px;
-      }
-    }
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.3);
+}
 
-    .nav-cart-btn {
-        position:relative;
-    }
+/* Productos */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
 
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 25%;
+    width: 50%; height: 2px;
+    background: var(--gold);
+}
 
-    .btn-cart-white {
-      background-color: #ffffff;
-      border: none;
-    }
+.product-card {
+    border: none;
+    transition: transform 0.3s ease;
+    background: white;
+    margin: 10px;
+}
 
-    .btn-cart-white svg {
-      fill: #d4af37; /* color oro */
-    }
+.product-card:hover {
+    transform: translateY(-5px);
+}
 
-    .btn-cart-white:hover {
-      background-color: #f0f0f0;
-    }
+.product-img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
-    .badge-gold {
-      background-color: #d4af37; /* oro */
-      color: #000000; /* texto negro para contraste */
-    }
+/* Botones */
+.btn-gold {
+    background-color: var(--gold);
+    color: black;
+    border: none;
+}
 
+.btn-gold:hover {
+    background-color: #c49b2d;
+    color: white;
+}
 
-    .cart-badge {
-        position:absolute; 
-        top:-6px; 
-        right:-6px; 
-        font-size:0.7rem;
-    }
+.btn-cart-gold {
+    background: white;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    position: relative;
+}
 
-    .presentacion-container {
-      width: 100%;
-      overflow: hidden;
-    }
+/* Carrito */
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 0.7rem;
+}
 
-    .presentacion-img {
-      width: 100%;
-      height: auto; /* Mantiene proporción */
-      display: block;
-    }
+.remove-item {
+    font-size: 0.8rem;
+    text-decoration: none;
+}
 
-
-
-      /* Hero / productos */
-    .category-pills .nav-link {
-        border-radius:50px
-    }
-    .product-title {
-        font-family: 'Playfair Display', serif; 
-        font-size:1.6rem
-    }
-
-      /* Cards */
-    .product-card {
-        border:none; 
-        background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(246,214,199,0.4)); 
-        border-radius:14px; 
-        box-shadow:0 6px 20px rgba(139,94,60,0.08)
-    }
-
-    .product-img {
-        height:220px; 
-        object-fit:cover; 
-        border-radius:12px;
-    }
-
-      /* Footer */
-    footer {
-        background:#000000; 
-        border-top:1px solid #eee;
-    }
-    .social-icon {
-        width:36px; 
-        height:36px; 
-        display:inline-flex; 
-        align-items:center; 
-        justify-content:center; 
-        border-radius:50%; 
-        background:var(--accent)
-    }
-
-      @media(min-width:1200px){
-        .product-img{height:280px}
-      }
+/* Carousel controls */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: var(--dark);
+    border-radius: 50%;
+    padding: 15px;
+}
