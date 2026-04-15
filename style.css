@@ -97,7 +97,7 @@
     }
 
     .nav-links {
-        flex-direction: column; /* Enlaces uno debajo del otro */
+        flex-direction: row; /* Enlaces uno debajo del otro */
         align-items: center;    /* Centra la lista */
         gap: 10px;              /* Reduce el espacio entre enlaces */
         width: 100%;
