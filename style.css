@@ -1,4 +1,3 @@
-/* 1. Variables de color (Fundamentales para el modo oscuro después) */
 :root {
     --bg-crema: #f7f3f0;
     --texto-oscuro: #2d2d2d;
@@ -61,6 +60,7 @@
     align-items: center;
     gap: 15px;
 }
+
 .btn-cv {
    display: flex;         
     align-items: center;   
@@ -76,52 +76,7 @@
     transition: all 0.3s;
 }
 
-/* --- RESPONSIVE NAVBAR (Móviles) --- */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Apila los elementos verticalmente */
-        height: auto;           /* Permite que el alto crezca según el contenido */
-        padding: 20px 0;        /* Espaciado interno arriba y abajo */
-        gap: 15px;              /* Espacio entre logo, menú y botón */
-    }
 
-    .logo {
-        margin-left: 0;         /* Elimina márgenes laterales para centrar */
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .logo-img {
-        height: 35px;           /* Logo más pequeño en móviles  */
-    }
-
-    .nav-links {
-        flex-direction: row; /* Enlaces uno debajo del otro */
-        align-items: center;    /* Centra la lista */
-        gap: 10px;              /* Reduce el espacio entre enlaces */
-        width: 100%;
-        padding: 0;
-        margin: 10px 0;         /* Separa la lista del logo y el botón */
-    }
-
-    .nav-links li {
-        width: 100%;
-        text-align: center;     /* Justifica el texto al centro */
-    }
-
-    .nav-actions {
-        margin-right: 0;        /* Quita el margen derecho original [cite: 327] */
-        justify-content: center;
-        width: 100%;
-    }
-
-    .btn-cv {
-        padding: 6px 12px;      /* Botón más pequeño y compacto [cite: 328] */
-        font-size: 0.75rem;     /* Letra más pequeña */
-        gap: 5px;               /* Reduce espacio entre icono y texto */
-    }
-}
 
 .btn-cv:hover {
     background-color: var(--texto-oscuro);
@@ -134,18 +89,12 @@
     display: block; 
 }
 
-/* Tamaño en mobile */
-@media (max-width: 768px) {
-    .logo-img {
-        height: 35px;
-    }
-}
 
-/* --- SECCIÓN HERO --- */
+
 .hero {
-    padding-top: 120px; /* Espacio para que el Navbar fixed no tape el contenido */
-    padding-bottom: 80px;
-    min-height: 90vh; /* Para que ocupe casi toda la pantalla */
+    padding-top: 100px; 
+    padding-bottom: 50px;
+    min-height: 70vh; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,12 +105,13 @@
     max-width: 1200px;
     width: 90%;
     display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Divide en dos columnas: imagen y texto */
-    gap: 60px; /* Espacio entre la foto y el texto */
+    grid-template-columns: 1fr 1.2fr; 
+    gap: 60px; 
     align-items: center;
 }
 
-/* --- ESTILO DE LA IMAGEN --- */
+
+
 .hero-image {
     position: relative;
 }
@@ -169,10 +119,10 @@
 .hero-image img {
     width: 100%;
     height: auto;
-    border-radius: 24px; /* Bordes redondeados como el mockup */
+    border-radius: 24px;
     display: block;
 }
-     --- BOTONES DEL HERO --- */
+
 .hero-btns {
     display: flex;
     gap: 20px;
@@ -186,12 +136,12 @@
     border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
-    transition: transform 0.3s, background 0.3s;
+    transition: transform 0.3s;
 }
 
 .btn-primary:hover {
-    background-color: #b8664e; /* Un tono más oscuro de coral */
-    transform: translateY(-3px); /* Pequeño salto al pasar el mouse */
+    background-color: #b8664e; 
+    transform: translateY(-3px); 
 }
 
 .btn-text {
@@ -207,44 +157,10 @@
     color: var(--coral);
 }
 
-/* --- RESPONSIVE (Para que se vea bien en celulares) --- */
-@media (max-width: 968px) {
-    .hero-container {
-        grid-template-columns: 1fr; /* Una columna arriba de la otra */
-        text-align: center;
-        gap: 40px;
-    }
 
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-content p {
-        margin: 0 auto 32px auto;
-    }
-
-    .hero-btns {
-        justify-content: center;
-    }
-
-    .hero-image {
-        order: -1; /* Mueve la foto arriba del texto en mobile */
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-        justify-self: center;
-    }
-    .hero-image img{
-        width: 100%;
-        height: auto;
-        border-radius: 20px;
-        object-fit: cover;
-    }
-}
-/* Efecto de sombra suave y elegante */
 
 .hero-content h1 {
-    font-size: 3rem; /* Tamaño grande e impactante */
+    font-size: 3rem; 
     color: var(--texto-oscuro);
     line-height: 1.1;
     margin-bottom: 24px;
@@ -253,15 +169,15 @@
 
 .hero-content p {
     font-size: 1.1rem;
-    color: var(--text-muted); /* Si no la tienes, usa #666 */
+    color: var(--text-muted); 
     line-height: 1.6;
     margin-bottom: 32px;
     max-width: 500px;
 }
-/* --- SECCIÓN SERVICIOS --- */
+
 .services {
     padding: 100px 5%;
-    background-color: #ffffff; /* Un blanco puro para que resalte sobre el crema del hero */
+    background-color: #ffffff; 
     text-align: center;
 }
 
@@ -277,14 +193,16 @@
     color: var(--texto-oscuro);
 }
 
+
 .services-grid {
     display: grid;
-    /* Esto crea columnas automáticas que se ajustan solas al tamaño de la pantalla */
+    
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 30px;
 }
 
-/* --- ESTILO DE LA TARJETA --- */
+
+
 .service-card {
     background-color: var(--blanco);
     padding: 40px 30px;
@@ -340,13 +258,13 @@
     color: var(--coral);
     font-weight: 700;
     font-size: 0.9rem;
-    margin-top: auto; /* Empuja el link siempre al fondo de la tarjeta */
+    margin-top: auto; 
 }
 
-/* --- SECCIÓN PORTAFOLIO --- */
+
 .portfolio {
     padding: 100px 5%;
-    background-color: var(--bg-crema); /* Fondo suave para contrastar con los servicios blancos */
+    background-color: var(--bg-crema); 
 }
 
 .portfolio-grid {
@@ -357,11 +275,11 @@
     margin: 0 auto;
 }
 
-/* --- TARJETA DE PROYECTO --- */
+
 .portfolio-item {
     background: var(--blanco);
     border-radius: 24px;
-    overflow: hidden; /* Para que la imagen no se salga de los bordes redondeados */
+    overflow: hidden; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
@@ -370,11 +288,11 @@
     transform: translateY(-5px);
 }
 
-/* Contenedor de Imagen con Overlay */
+
 .portfolio-img {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 16 / 10; /* Mantiene la proporción de tus mockups */
+    aspect-ratio: 16 / 10; 
 }
 
 .portfolio-img img {
@@ -385,7 +303,7 @@
 }
 
 .portfolio-item:hover .portfolio-img img {
-    transform: scale(1.1); /* Zoom suave al hacer hover */
+    transform: scale(1.1); 
 }
 
 .portfolio-overlay {
@@ -394,7 +312,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(211, 125, 99, 0.8); /* Tu color coral con transparencia */
+    background: rgba(211, 125, 99, 0.8); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -415,7 +333,6 @@
     border-radius: 50px;
 }
 
-/* --- INFORMACIÓN DEL PROYECTO --- */
 .portfolio-info {
     padding: 25px;
 }
@@ -443,7 +360,7 @@
     margin-bottom: 20px;
 }
 
-/* Tags Tecnológicos */
+
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -459,7 +376,7 @@
     color: var(--text-muted);
 }
 
-/* --- SECCIÓN CONTACTO --- */
+
 .contact {
     padding: 100px 5%;
     background-color: var(--blanco);
@@ -498,7 +415,7 @@
     color: var(--coral);
 }
 
-/* --- ESTILO FORMULARIO --- */
+
 .contact-form-wrapper {
     background: var(--bg-crema);
     padding: 40px;
@@ -558,13 +475,7 @@
 
 
 
-/* Responsive */
-@media (max-width: 850px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-}
+
 
 /* --- FOOTER --- */
 .footer {
@@ -579,7 +490,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Para que en móviles se acomode bien */
+    flex-wrap: wrap; 
     gap: 30px;
     margin-bottom: 40px;
 }
@@ -651,20 +562,161 @@
     color: #999;
 }
 
-/* Ajuste para móviles */
+
+
+/* --- RESPONSIVE MOBILE --- */
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; 
+        height: auto;           
+        padding: 20px 0;        
+        gap: 15px;              
+    }
+
+    .logo {
+        margin-left: 0;         
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo-img {
+        height: 50px;     
+    }
+
+    .nav-links {
+        gap: 10px;              
+        width: 100%;
+        padding: 0;
+        margin: 10px 0;        
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;    
+    }
+
+    .nav-actions {
+        margin-right: 0;        
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-cv {
+        padding: 6px 12px;      /* Botón más pequeño y compacto [cite: 328] */
+        font-size: 0.75rem;     /* Letra más pequeña */
+        gap: 5px;               /* Reduce espacio entre icono y texto */
+    }
+
+    .logo-img {
+        height: 50px;
+    }
+
+    .footer {
+        padding: 40px 5% 20px; /* Reducimos un poco el padding superior */
+    }
+
     .footer-container {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Apila el logo, los links y las redes verticalmente */
+        text-align: center;      /* Centra todo el texto */
+        gap: 30px;               /* Espacio uniforme entre bloques */
     }
-    
+
+    .logo-img-footer {
+        height: 100px;            /* Logo un poco más pequeño para no saturar */
+        margin: 0 auto;          /* Asegura el centrado horizontal */
+    }
+
     .footer-brand p {
-        margin: 10px auto;
+        margin: 0px;       /* Centra el párrafo descriptivo */
+        max-width: 280px;        /* Evita que el texto sea muy ancho */
+        font-size: 0.85rem;
+    }
+
+    .footer-links {
+        flex-direction: column;  /* Enlaces en lista vertical */
+        gap: 15px;
+    }
+
+    .footer-social {
+        justify-content: center; /* Centra los iconos de redes sociales */
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+        padding-top: 20px;
+        font-size: 0.75rem;      /* Texto de copyright más discreto */
+    }
+}
+
+
+@media (max-width: 968px) {
+    .hero-container {
+        grid-template-columns: 1fr; /* Una columna arriba de la otra */
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        margin: 0 auto 32px auto;
+    }
+
+    .hero-image {
+        order: -1; /* Mueve la foto arriba del texto en mobile */
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        justify-self: center;
+    }
+    .hero-image img{
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
     }
     
-    .footer-links {
-        flex-direction: column;
-        gap: 15px;
+    .hero-btns {
+        display: flex;
+        flex-direction: column !important; /* El !important asegura que mande sobre el de PC */
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        max-width: 280px;      /* Tamaño ideal para que no toque los bordes del cel */
+        text-align: center;
+        display: block;        /* Para que se comporte como bloque */
+        padding: 15px 0;       /* Más alto para que sea fácil de tocar */
+    }
+
+    .btn-text {
+        margin-left: 0 !important; /* Quitamos el espacio que lo empujaba a la derecha */
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    
+    /* Ajuste del título para que no choque con los botones */
+    .hero-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+/* Responsive */
+@media (max-width: 850px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
     }
 }
 
