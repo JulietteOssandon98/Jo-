@@ -76,6 +76,53 @@
     transition: all 0.3s;
 }
 
+/* --- RESPONSIVE NAVBAR (Móviles) --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        height: auto;           /* Permite que el alto crezca según el contenido */
+        padding: 20px 0;        /* Espaciado interno arriba y abajo */
+        gap: 15px;              /* Espacio entre logo, menú y botón */
+    }
+
+    .logo {
+        margin-left: 0;         /* Elimina márgenes laterales para centrar */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo-img {
+        height: 35px;           /* Logo más pequeño en móviles  */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Enlaces uno debajo del otro */
+        align-items: center;    /* Centra la lista */
+        gap: 10px;              /* Reduce el espacio entre enlaces */
+        width: 100%;
+        padding: 0;
+        margin: 10px 0;         /* Separa la lista del logo y el botón */
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;     /* Justifica el texto al centro */
+    }
+
+    .nav-actions {
+        margin-right: 0;        /* Quita el margen derecho original [cite: 327] */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn-cv {
+        padding: 6px 12px;      /* Botón más pequeño y compacto [cite: 328] */
+        font-size: 0.75rem;     /* Letra más pequeña */
+        gap: 5px;               /* Reduce espacio entre icono y texto */
+    }
+}
+
 .btn-cv:hover {
     background-color: var(--texto-oscuro);
     color: var(--blanco);
